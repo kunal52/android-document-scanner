@@ -7,13 +7,13 @@ apply plugin: "jacoco"
 apply from: '../jacoco/modules.gradle'
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 33
     buildToolsVersion "30.0.3"
 
     defaultConfig {
 
-        minSdkVersion 27
-        targetSdkVersion 32
+        minSdkVersion 26
+        targetSdkVersion 33
         versionCode project.property("version_code").toInteger()
         versionName project.property("version_name") as String
 
@@ -123,7 +123,7 @@ afterEvaluate {
                 // artifact androidJavadocsJar
                 artifact androidSourcesJar
 
-                groupId 'net.kuama.android'
+                groupId 'com.github.kunal52'
                 artifactId 'documentscanner'
                 version project.property('version_name')
             }
